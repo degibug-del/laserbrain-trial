@@ -1,0 +1,40 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "LASERBRAIN_AGENT=claude python3 \"/Users/diegorincon/Library/Mobile Documents/com~apple~CloudDocs/phronesis/lasergear/lb_coverage.py\""
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "LASERBRAIN_AGENT=claude python3 \"/Users/diegorincon/Library/Mobile Documents/com~apple~CloudDocs/phronesis/lasergear/lb_coverage.py\""
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "LASERBRAIN_AGENT=claude python3 \"/Users/diegorincon/Library/Mobile Documents/com~apple~CloudDocs/phronesis/lasergear/lb_gate.py\""
+          },
+          {
+            "type": "command",
+            "command": "LASERBRAIN_AGENT=claude python3 \"/Users/diegorincon/Library/Mobile Documents/com~apple~CloudDocs/phronesis/lasergear/lb_safety.py\""
+          }
+        ]
+      }
+    ]
+  }
+}
